@@ -5,7 +5,7 @@ const newProducts = require("../models/seed.js");
 const Product = require("../models/products.js");
 
 router.get("/", (req, res) => {
-  res.send("ok")
+  res.redirect("/index")
 });
 
 router.get("/seed", async (req, res) => {
