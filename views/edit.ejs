@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>edit product</title>
+  </head>
+  <body>
+    <h1>edit product</h1>
+    <form action="/product/<%= data._id %>?_method=PUT" method="POST">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" value=<%=data.name%>>
+      <label for="description">Description</label>
+      <input type="text" name="description" id="description" value=<%=data.description%> />
+      <label for="img">img</label>
+      <input type="text" name="img" id="img" value=<%=data.img%> />
+      <label for="qty">qty</label>
+      <input type="text" name="qty" id="qty" value=<%=data.qty%> />
+      <label for="price">price</label>
+      <input type="text" name="price" id="price" value=<%=data.price%> />
+      <input type="submit" value="edit product" />
+    </form>
+  </body>
+</html>

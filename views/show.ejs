@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="/app.css">
+
+<head>
+    <meta charset="utf-8" />
+    <title>product</title>
+</head>
+
+<body>
+    <h1>product</h1>
+    <div >
+        <div >
+            <h3><%= data.name %></h3>
+            <img src=<%=data.img %>>       
+           
+        </div>
+        <p>price: $<%= data.price%></p>
+        <% if (data.qty == 0) { %>
+            <p>sold out</p>
+        <% } else { %>
+            <p>qty: <%= data.qty%></p>
+            <%  }  %>
+
+        <div >
+            <form action="/product/" method="GET">
+                <input type="submit" value="BACK" />
+            </form>
+            <% if (data.qty == 0) { %>
+                <p>sold out</p>
+    
+            <% } else { %>
+                <form action="/product/<%= data.id%>/buy?_method=PUT" method="POST">
+                    <input type="submit" value="BUY" />
+                </form>
+                <%  }  %>
+            <form action="/product/<%= data.id%>/edit" method="GET">
+                <input type="submit" value="EDIT" />
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>
