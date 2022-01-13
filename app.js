@@ -1,4 +1,5 @@
 const express = require('express')
+const db = require("./index")
 const app =express();
 const productsController = require('./controllers/productsController')
 require("dotenv").config()
