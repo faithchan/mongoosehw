@@ -8,6 +8,6 @@ const methodOverride = require("method-override")
 app.use(methodOverride("_method"))
 app.use(express.static("public"))
 app.use(express.json())
-app.use("/api", productsController)
+app.use(productsController)
 
 module.exports=app
